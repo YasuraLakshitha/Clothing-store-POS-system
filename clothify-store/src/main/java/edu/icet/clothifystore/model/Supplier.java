@@ -17,5 +17,5 @@ public class Supplier {
     private String supplierPassword;
     private String companyName;
     private String item;
-    private Set<SupplierProductEntity> supplierProductEntitySet;
+    private Set<SupplierProduct> supplierProductSet;
 }

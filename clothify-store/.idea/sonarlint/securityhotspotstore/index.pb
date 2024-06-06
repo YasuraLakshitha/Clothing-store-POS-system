@@ -94,3 +94,15 @@ Ysrc/main/java/edu/icet/clothifystore/dao/custom/supplier/impl/SupplierRepositor
 Nsrc/main/java/edu/icet/clothifystore/bo/custom/supplier/BoSupplierService.java,8\f\8f192d14e91c366ee34ad6820477a251c894965e
 á
 Wsrc/main/java/edu/icet/clothifystore/bo/custom/supplier/impl/BoSupplierServiceImpl.java,4\8\480446fb9facbc5563f76a4563106ae69624860e
+z
+Jsrc/main/java/edu/icet/clothifystore/dao/custom/admin/AdminRepository.java,a\9\a9158d3b774628e72a73abe548291001d46f7fc8
+}
+Msrc/main/java/edu/icet/clothifystore/persistance/LoginPageFormController.java,2\7\27685ff0cafbda245b054670c331e414d36c1961
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+w
+G.idea/sonarlint/issuestore/a/9/a9158d3b774628e72a73abe548291001d46f7fc8,e\9\e9fcf16dd6a8aaed3ac46676b25498b3d27298fd
+Å
+Q.idea/sonarlint/securityhotspotstore/a/9/a9158d3b774628e72a73abe548291001d46f7fc8,d\d\dd07eff59b14ef4b6ec3a9d36809624940b4a514
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0

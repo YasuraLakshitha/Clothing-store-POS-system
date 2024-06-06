@@ -19,17 +19,25 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     @Override
     public EmployeeEntity findById(String id) {
-        return null;
+        session.beginTransaction();
+        EmployeeEntity employeeEntity = session.get(EmployeeEntity.class, id);
+        session.getTransaction().commit();
+        return employeeEntity;
     }
 
     @Override
     public Boolean delete(String id) {
-        return null; //TODO Delete employee
+        session.beginTransaction();
+        session.remove(session.get(EmployeeEntity.class, id));
+        session.getTransaction().commit();
+        return !session.contains(session.get(EmployeeEntity.class, id));
     }
 
     @Override
-    public Boolean update(String id) {
-        return null;
+    public Boolean update(EmployeeEntity object) {
+        session.beginTransaction();
+        session.merge(object);
+        return true;
     }
 
     @Override
@@ -39,5 +47,27 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
                 "from employee ", EmployeeEntity.class).list();
         session.getTransaction().commit();
         return employeeEntityList;
+    }
+
+    @Override
+    public EmployeeEntity findByEmailAndPassword(String email, String password) {
+        session.beginTransaction();
+        EmployeeEntity employeeEntity = session.createQuery(
+                        "from employee where employeeEmail = :email and employeePassword = :password", EmployeeEntity.class)
+                .setParameter("email", email)
+                .setParameter("password", password)
+                .getSingleResult();
+        session.getTransaction().commit();
+        return employeeEntity;
+    }
+
+    @Override
+    public EmployeeEntity findByEmail(String email) {
+        session.beginTransaction();
+        EmployeeEntity employeeEntity = session.createQuery("from employee where employeeEmail = :email", EmployeeEntity.class)
+                .setParameter("email", email)
+                .getSingleResult();
+        session.getTransaction().commit();
+        return employeeEntity;
     }
 }

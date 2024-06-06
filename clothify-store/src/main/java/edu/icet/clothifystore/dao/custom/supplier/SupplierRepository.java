@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface SupplierRepository extends Crud<SupplierEntity,String> {
     List<SupplierEntity> getAllSuppliers();
+
+    SupplierEntity findByEmail(String email);
 }

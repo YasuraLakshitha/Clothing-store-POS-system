@@ -15,6 +15,7 @@ public class AdminRepositoryImpl implements AdminRepository {
         session.beginTransaction();
         session.persist(adminEntity);
         session.getTransaction().commit();
+        session.clear();
         return true;
     }
 
@@ -35,8 +36,11 @@ public class AdminRepositoryImpl implements AdminRepository {
     }
 
     @Override
-    public Boolean update(String id) {
-        return null;
+    public Boolean update(AdminEntity object) {
+        session.beginTransaction();
+        session.merge(object);
+        session.getTransaction().commit();
+        return true;
     }
 
 
@@ -46,5 +50,26 @@ public class AdminRepositoryImpl implements AdminRepository {
         List<AdminEntity> adminEntityList = session.createQuery("from admin", AdminEntity.class).list();
         session.getTransaction().commit();
         return adminEntityList;
+    }
+
+    @Override
+    public AdminEntity findByEmailAndPassword(String email, String password) {
+        session.beginTransaction();
+        AdminEntity adminEntity = session.createQuery("from admin where adminPassword = :password and adminEmail = : email", AdminEntity.class)
+                .setParameter("password", password)
+                .setParameter("email", email)
+                .getSingleResult();
+        session.getTransaction().commit();
+        return adminEntity;
+    }
+
+    @Override
+    public AdminEntity findAdminByEmail(String email) {
+        session.beginTransaction();
+        AdminEntity adminEntity = session.createQuery("from admin where  adminEmail = :email",AdminEntity.class)
+                .setParameter("email",email)
+                .getSingleResult();
+        session.getTransaction().commit();
+        return adminEntity;
     }
 }

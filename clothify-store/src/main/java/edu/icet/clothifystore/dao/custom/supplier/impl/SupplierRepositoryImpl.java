@@ -34,8 +34,11 @@ public class SupplierRepositoryImpl implements SupplierRepository {
     }
 
     @Override
-    public Boolean update(String id) {
-        return null;
+    public Boolean update(SupplierEntity object) {
+        session.beginTransaction();
+        session.merge(object);
+        session.getTransaction().commit();
+        return session.contains(session.get(SupplierEntity.class, object.getId()));
     }
 
     @Override
@@ -45,5 +48,15 @@ public class SupplierRepositoryImpl implements SupplierRepository {
                 "from supplier", SupplierEntity.class).list();
         session.getTransaction().commit();
         return supplierEntityList;
+    }
+
+    @Override
+    public SupplierEntity findByEmail(String email) {
+        session.beginTransaction();
+        SupplierEntity supplierEntity = session.createQuery("from supplier where supplierEmail = :email", SupplierEntity.class)
+                .setParameter("email", email)
+                .uniqueResult();
+        session.getTransaction().commit();
+        return supplierEntity;
     }
 }

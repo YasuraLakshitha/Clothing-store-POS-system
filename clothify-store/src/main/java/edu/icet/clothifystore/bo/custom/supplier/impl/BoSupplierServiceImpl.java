@@ -4,7 +4,9 @@ import edu.icet.clothifystore.bo.custom.supplier.BoSupplierService;
 import edu.icet.clothifystore.dao.DaoFactory;
 import edu.icet.clothifystore.dao.custom.supplier.SupplierRepository;
 import edu.icet.clothifystore.entity.SupplierEntity;
+import edu.icet.clothifystore.entity.SupplierProductEntity;
 import edu.icet.clothifystore.model.Supplier;
+import edu.icet.clothifystore.model.SupplierProduct;
 import edu.icet.clothifystore.util.DaoType;
 import org.modelmapper.ModelMapper;
 
@@ -25,8 +27,8 @@ public class BoSupplierServiceImpl implements BoSupplierService {
     }
 
     @Override
-    public Boolean update(String id) {
-        return null;
+    public Boolean update(Supplier object) {
+        return repository.update(modelMapper.map(object, SupplierEntity.class));
     }
 
     @Override
@@ -63,5 +65,17 @@ public class BoSupplierServiceImpl implements BoSupplierService {
         }
         if (nextSupplierId!=null) return String.format("SUP%03d", ++nextSupplierId);
         return null;
+    }
+
+    @Override
+    public Supplier findSupplierByEmail(String email) {
+        SupplierEntity supplierEntity = repository.findByEmail(email);
+        Supplier supplier = modelMapper.map(supplierEntity, Supplier.class);
+        supplierEntity.getSupplierProductEntitySet().forEach(supplierProductEntity -> {
+            supplier.getSupplierProductSet().add(
+                    modelMapper.map(supplierProductEntity, SupplierProduct.class)
+            );
+        });
+        return supplier;
     }
 }

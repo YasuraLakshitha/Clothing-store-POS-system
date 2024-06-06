@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.clothifystore.persistance.LoginPageFormController">
+   <children>
+      <Label layoutX="70.0" layoutY="14.0" text="User Login">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbUserType" layoutX="61.0" layoutY="96.0" promptText="Select user type" />
+      <TextField fx:id="txtEmail" layoutX="61.0" layoutY="138.0" promptText="Enter email" />
+      <TextField fx:id="txtPassword" layoutX="61.0" layoutY="188.0" promptText="Enter password" />
+      <Button layoutX="70.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnLoginOnAction" text="Login" />
+      <Button layoutX="70.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" text="Register" />
+      <Button fx:id="btnChangePassword" layoutX="61.0" layoutY="308.0" mnemonicParsing="false" onAction="#btnChangePasswordOnAction" text="Change Password" />
+   </children>
+</AnchorPane>

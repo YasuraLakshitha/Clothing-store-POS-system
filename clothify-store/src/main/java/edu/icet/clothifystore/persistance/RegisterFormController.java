@@ -74,15 +74,17 @@ public class RegisterFormController implements Initializable {
                 break;
 
             case "Employee":
+                Admin admin = adminService.findById(cmbStaffId.getValue());
                 employeeService.save(new Employee(
                         lblUserId.getText(),
                         txtName.getText(),
                         txtEmail.getText(),
                         txtPassword.getText(),
                         null,
-                        adminService.findById(cmbStaffId.getValue()),
+                        admin,
                         null
                 ));
+
                 break;
 
             case "Supplier":

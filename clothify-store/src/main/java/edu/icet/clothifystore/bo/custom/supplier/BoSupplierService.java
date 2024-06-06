@@ -9,4 +9,6 @@ public interface BoSupplierService extends Service<Supplier> {
     List<Supplier> findAll();
 
     String generateSupplierId();
+
+    Supplier findSupplierByEmail(String email);
 }

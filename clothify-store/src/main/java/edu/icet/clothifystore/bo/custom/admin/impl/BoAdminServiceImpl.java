@@ -4,11 +4,17 @@ import edu.icet.clothifystore.bo.custom.admin.BoServiceAdmin;
 import edu.icet.clothifystore.dao.custom.admin.AdminRepository;
 import edu.icet.clothifystore.dao.DaoFactory;
 import edu.icet.clothifystore.entity.AdminEntity;
+import edu.icet.clothifystore.entity.EmployeeEntity;
+import edu.icet.clothifystore.entity.ProductEntity;
 import edu.icet.clothifystore.model.Admin;
+import edu.icet.clothifystore.model.Employee;
+import edu.icet.clothifystore.model.Product;
 import edu.icet.clothifystore.util.DaoType;
 import org.modelmapper.ModelMapper;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,29 +28,51 @@ public class BoAdminServiceImpl implements BoServiceAdmin {
 
     @Override
     public Boolean save(Admin admin) {
-         repository.save(modelMapper.map(admin, AdminEntity.class));
-         return true;
+        // TODO Inverse mapping is not completed
+         return repository.save(modelMapper.map(admin, AdminEntity.class));
     }
 
     @Override
-    public Boolean update(String id) {
-        //TODO Update Admin
-        return null;
+    public Boolean update(Admin object) {
+        Set<EmployeeEntity> employeeEntitySet = new HashSet<>();
+        Set<ProductEntity> productEntitySet = new HashSet<>();
+
+        for (Employee employee : object.getEmployeeSet()) {
+            EmployeeEntity employeeEntity = modelMapper.map(employee, EmployeeEntity.class);
+            employeeEntity.setAdminEntity(modelMapper.map(object, AdminEntity.class));
+            employeeEntitySet.add(employeeEntity);
+        }
+
+        for (Product product : object.getProductSet()) {
+            ProductEntity productEntity = modelMapper.map(product, ProductEntity.class);
+            productEntity.setAdminEntity(modelMapper.map(object, AdminEntity.class));
+            productEntitySet.add(productEntity);
+        }
+
+        AdminEntity adminEntity = modelMapper.map(object, AdminEntity.class);
+        adminEntity.setEmployeeEntitySet(employeeEntitySet);
+        adminEntity.setProductEntitySet(productEntitySet);
+        return repository.update(adminEntity);
     }
 
     @Override
     public Boolean delete(String id) {
-        //TODO Delete Admin
-        return null;
+        return repository.delete(id);
     }
 
     @Override
     public Admin findById(String id) {
+
+        //TODO Inverse mapping is not completed
+
         return modelMapper.map(repository.findById(id),Admin.class);
     }
 
     @Override
     public List<Admin> findAll() {
+
+        //TODO mapping is not completed
+
         List<Admin> adminList = new ArrayList<>();
         List<AdminEntity> adminEntityList = repository.findAllAdmins();
         adminEntityList.forEach(adminEntity ->{
@@ -74,4 +102,32 @@ public class BoAdminServiceImpl implements BoServiceAdmin {
         });
         return adminIds;
     }
+
+    @Override
+    public Admin findAdminByEmailAndPassword(String password, String text) {
+
+        //TODO inverse mapping incomplete
+
+        return modelMapper.map(repository.findByEmailAndPassword(password, password),Admin.class);
+
+    }
+
+    @Override
+    public Admin findAdminByEmail(String email) {
+        AdminEntity adminEntity = repository.findAdminByEmail(email);
+        Admin admin = modelMapper.map(adminEntity, Admin.class);
+        Set<Employee> employeeSet = new HashSet<>();
+        Set<Product> productSet = new HashSet<>();
+
+        adminEntity.getEmployeeEntitySet().forEach(employeeEntity ->{
+            employeeSet.add(modelMapper.map(employeeEntity,Employee.class));
+        });
+        adminEntity.getProductEntitySet().forEach(productEntity ->{
+            productSet.add(modelMapper.map(productEntity,Product.class));
+        });
+        admin.setEmployeeSet(employeeSet);
+        admin.setProductSet(productSet);
+        return admin;
+    }
+
 }

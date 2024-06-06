@@ -5,12 +5,17 @@ import edu.icet.clothifystore.dao.DaoFactory;
 import edu.icet.clothifystore.dao.custom.employee.EmployeeRepository;
 import edu.icet.clothifystore.entity.AdminEntity;
 import edu.icet.clothifystore.entity.EmployeeEntity;
+import edu.icet.clothifystore.model.Admin;
 import edu.icet.clothifystore.model.Employee;
+import edu.icet.clothifystore.model.Order;
+import edu.icet.clothifystore.model.OrderDetails;
 import edu.icet.clothifystore.util.DaoType;
 import org.modelmapper.ModelMapper;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,6 +25,9 @@ public class BoEmployeeServiceImpl implements BoEmployeeService {
 
     @Override
     public Boolean save(Employee object) {
+
+        //TODO Inverse mapping
+
         AdminEntity adminEntity = modelMapper.map(object.getAdmin(), AdminEntity.class);
         EmployeeEntity employeeEntity = modelMapper.map(object, EmployeeEntity.class);
         employeeEntity.setAdminEntity(adminEntity);
@@ -27,18 +35,25 @@ public class BoEmployeeServiceImpl implements BoEmployeeService {
     }
 
     @Override
-    public Boolean update(String id) {
-        return null;
+    public Boolean update(Employee object) {
+
+        //TODO Inverse mapping
+
+        employeeRepository.update(modelMapper.map(object, EmployeeEntity.class));
+        return true;
     }
 
     @Override
     public Boolean delete(String id) {
-        return null;
+        return employeeRepository.delete(id);
     }
 
     @Override
     public Employee findById(String id) {
-        return null;
+
+        //TODO Inverse mapping
+
+        return modelMapper.map(employeeRepository.findById(id), Employee.class);
     }
 
     @Override
@@ -75,4 +90,30 @@ public class BoEmployeeServiceImpl implements BoEmployeeService {
         }
         return employeeIds;
      }
+
+    @Override
+    public EmployeeEntity findByEmployeeByEmailAndPassword(String email, String password) {
+        return employeeRepository.findByEmailAndPassword(email,password);
+    }
+
+    @Override
+    public Employee findEmployeeByEmail(String email) {
+        EmployeeEntity employeeEntity = employeeRepository.findByEmail(email);
+        Set<Order> orderSet = new HashSet<>();
+        Set<OrderDetails> orderDetailsSet = new HashSet<>();
+
+        Admin admin = modelMapper.map(employeeEntity.getAdminEntity(), Admin.class);
+        employeeEntity.getOrderEntitySet().forEach(order -> {
+            orderSet.add(modelMapper.map(order, Order.class));
+        });
+        employeeEntity.getOrderDetailsEntitySet().forEach(orderDetailsEntity -> {
+            orderDetailsSet.add(modelMapper.map(orderDetailsEntity,OrderDetails.class));
+        });
+
+        Employee employee = modelMapper.map(employeeEntity, Employee.class);
+        employee.setAdmin(admin);
+        employee.setOrderSet(orderSet);
+        employee.setOrderDetailsSet(orderDetailsSet);
+        return employee;
+    }
 }

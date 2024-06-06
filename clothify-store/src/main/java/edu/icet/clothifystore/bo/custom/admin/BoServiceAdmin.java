@@ -9,4 +9,8 @@ public interface BoServiceAdmin extends Service<Admin> {
     List<Admin> findAll();
     String generateAdminId();
     List<String> loadAdminIds();
+    Admin findAdminByEmailAndPassword(String password, String text);
+
+    Admin findAdminByEmail(String email);
+
 }

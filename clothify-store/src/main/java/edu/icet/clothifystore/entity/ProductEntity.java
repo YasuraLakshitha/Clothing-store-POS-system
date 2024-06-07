@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.util.Set;
 
 @Data
@@ -12,6 +13,7 @@ import java.util.Set;
 @Entity(name = "product")
 public class ProductEntity {
     @Id
+    @Column(name = "product_id")
     private String id;
     private String productName;
     private Integer productSize;

@@ -5,7 +5,6 @@ import edu.icet.clothifystore.bo.BoFactory;
 import edu.icet.clothifystore.bo.custom.admin.BoServiceAdmin;
 import edu.icet.clothifystore.bo.custom.employee.BoEmployeeService;
 import edu.icet.clothifystore.bo.custom.supplier.BoSupplierService;
-import edu.icet.clothifystore.bo.custom.supplier.impl.BoSupplierServiceImpl;
 import edu.icet.clothifystore.model.Admin;
 import edu.icet.clothifystore.model.Employee;
 import edu.icet.clothifystore.model.Supplier;
@@ -99,19 +98,21 @@ public class LoginPageFormController implements Initializable {
     }
 
     public <T> void handlePasswordChange(T object) {
-        if (object instanceof Admin) {
-            Admin admin = (Admin) object;
-            admin.setAdminPassword(txtPassword.getText());
-            adminService.update(admin);
-        } else if (object instanceof Employee) {
-            Employee employee = (Employee) object;
-            employee.setEmployeePassword(txtPassword.getText());
-            employeeService.update(employee);
-        } else {
-            Supplier supplier = (Supplier) object;
-            supplier.setSupplierPassword(txtPassword.getText());
-            supplierService.update(supplier);
-        }
+        btnChangePassword.addEventHandler(ActionEvent.ACTION, event -> {
+            if (object instanceof Admin) {
+                Admin admin = (Admin) object;
+                admin.setAdminPassword(txtPassword.getText());
+                adminService.update(admin);
+            } else if (object instanceof Employee) {
+                Employee employee = (Employee) object;
+                employee.setEmployeePassword(txtPassword.getText());
+                employeeService.update(employee);
+            } else {
+                Supplier supplier = (Supplier) object;
+                supplier.setSupplierPassword(txtPassword.getText());
+                supplierService.update(supplier);
+            }
+        });
     }
 
 }

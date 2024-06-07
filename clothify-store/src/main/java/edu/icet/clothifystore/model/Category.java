@@ -11,7 +11,8 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Category {
-    private Integer id;
+    private String id;
     private String categoryType;
+    private String categoryDescription;
     private Set<Product> productSet;
 }

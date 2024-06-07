@@ -2,11 +2,12 @@ package edu.icet.clothifystore.bo;
 
 import edu.icet.clothifystore.bo.custom.admin.impl.BoAdminServiceImpl;
 import edu.icet.clothifystore.bo.custom.employee.impl.BoEmployeeServiceImpl;
+import edu.icet.clothifystore.bo.custom.product.impl.BoProductServiceImpl;
 import edu.icet.clothifystore.bo.custom.supplier.impl.BoSupplierServiceImpl;
 import edu.icet.clothifystore.util.BoType;
 
 public class BoFactory {
-    public <T>T createBoImpl(BoType boType) {
+    public <T extends SupperBo> T createBoImpl(BoType boType) {
         switch (boType) {
             case ADMIN:
                 return (T) new BoAdminServiceImpl();
@@ -14,7 +15,10 @@ public class BoFactory {
                 return (T) new BoEmployeeServiceImpl();
             case SUPPLIER:
                 return (T) new BoSupplierServiceImpl();
+            case PRODUCT:
+                return (T) new BoProductServiceImpl();
+            default:
+                throw new RuntimeException("Unsupported bo type: " + boType);
         }
-        return null;
     }
 }

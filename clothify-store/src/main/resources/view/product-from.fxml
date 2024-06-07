@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="443.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/21"
+            fx:controller="edu.icet.clothifystore.persistance.ProductFormController">
+    <children>
+        <TextField fx:id="txtProductName" layoutX="68.0" layoutY="123.0" promptText="Product Name"/>
+        <TextField fx:id="txtProductSize" layoutX="68.0" layoutY="173.0" promptText="Product size"/>
+        <TextField fx:id="txtProductPrice" layoutX="68.0" layoutY="228.0" promptText="Product Price"/>
+        <TextField fx:id="txtProductQty" layoutX="70.0" layoutY="266.0" promptText="Quantity"/>
+        <Label layoutX="71.0" layoutY="87.0" text="ID :"/>
+        <Label fx:id="lblProductId" layoutX="89.0" layoutY="87.0" prefHeight="17.0" prefWidth="76.0" text="PR-M001"/>
+        <Button layoutX="76.0" layoutY="314.0" mnemonicParsing="false" onAction="#btnAddProductOnAction"
+                prefHeight="25.0" prefWidth="139.0" text="Add product"/>
+        <Button layoutX="76.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0"
+                prefWidth="139.0" text="Update product"/>
+        <Button layoutX="78.0" layoutY="391.0" mnemonicParsing="false" onAction="#btnSearchModeOnAction"
+                prefHeight="25.0" prefWidth="139.0" text="Search mode"/>
+        <Button fx:id="btnSearch" disable="true" layoutX="168.0" layoutY="83.0" mnemonicParsing="false"
+                onAction="#btnSearchOnAction" text="Search"/>
+        <JFXComboBox fx:id="cmbCategory" layoutX="247.0" layoutY="83.0" onAction="#cmbCategoryOnAction"
+                     prefHeight="25.0" prefWidth="101.0" promptText="Category"/>
+        <Label layoutX="85.0" layoutY="14.0" text="Product panel">
+            <font>
+                <Font size="27.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

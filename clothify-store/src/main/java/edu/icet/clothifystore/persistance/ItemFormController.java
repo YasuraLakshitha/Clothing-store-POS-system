@@ -2,7 +2,8 @@ package edu.icet.clothifystore.persistance;
 
 import com.jfoenix.controls.JFXComboBox;
 import edu.icet.clothifystore.bo.BoFactory;
-import edu.icet.clothifystore.bo.custom.product.ProductBoService;
+import edu.icet.clothifystore.bo.custom.category.CategoryService;
+import edu.icet.clothifystore.bo.custom.item.ItemBoService;
 import edu.icet.clothifystore.util.BoType;
 import edu.icet.clothifystore.util.CategoryType;
 import javafx.collections.FXCollections;
@@ -16,23 +17,39 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ProductFormController implements Initializable {
+public class ItemFormController implements Initializable {
 
-    private final ProductBoService ProductService = new BoFactory().createBoImpl(BoType.PRODUCT);
+    private final ItemBoService itemBoService = new BoFactory().createBoImpl(BoType.ITEM);
+
+    private final CategoryService categoryService = new BoFactory().createBoImpl(BoType.CATEGORY);
+
     @FXML
     public Button btnSearch;
+
+    @FXML
+    public Label lblSupplierId;
+
+    @FXML
+    public JFXComboBox<String> cmbProductType;
+
     @FXML
     private JFXComboBox<Enum<CategoryType>> cmbCategory;
+
     @FXML
     private Label lblProductId;
+
     @FXML
     private TextField txtProductQty;
+
     @FXML
     private TextField txtProductName;
+
     @FXML
     private TextField txtProductPrice;
+
     @FXML
     private TextField txtProductSize;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -42,6 +59,7 @@ public class ProductFormController implements Initializable {
 
     @FXML
     void btnAddProductOnAction(ActionEvent event) {
+
         //TODO: save product
         //TODO: update quantity
         //TODO: update category set
@@ -50,8 +68,7 @@ public class ProductFormController implements Initializable {
 
     @FXML
     public void cmbCategoryOnAction(ActionEvent actionEvent) {
-        System.out.println("asdasd");
-        setProductId();
+        setItemId();
     }
 
     @FXML
@@ -62,13 +79,18 @@ public class ProductFormController implements Initializable {
     @FXML
     void btnSearchOnAction(ActionEvent event) {
         //TODO: Generate next id
-        //TODO: Search by id
+        //TODO: Search by product, by category, by id
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
         //TODO: Update
         //TODO: update quantity
+    }
+
+    @FXML
+    public void cmbProductTypeOnAction(ActionEvent actionEvent) {
+        //TODO: load products
     }
 
     private void loadCategory() {
@@ -80,8 +102,8 @@ public class ProductFormController implements Initializable {
         ));
     }
 
-    public void setProductId() {
-        lblProductId.setText(ProductService.generateId(cmbCategory.getValue()));
+    public void setItemId() {
+        lblProductId.setText(itemBoService.generateId(cmbCategory.getValue()));
     }
 }
 

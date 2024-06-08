@@ -1,10 +1,10 @@
-package edu.icet.clothifystore.bo.custom.product.impl;
+package edu.icet.clothifystore.bo.custom.item.impl;
 
-import edu.icet.clothifystore.bo.custom.product.ProductBoService;
+import edu.icet.clothifystore.bo.custom.item.ItemBoService;
 import edu.icet.clothifystore.dao.DaoFactory;
-import edu.icet.clothifystore.dao.custom.product.ProductRepository;
-import edu.icet.clothifystore.entity.ProductEntity;
-import edu.icet.clothifystore.model.Product;
+import edu.icet.clothifystore.dao.custom.item.ItemRepository;
+import edu.icet.clothifystore.entity.ItemEntity;
+import edu.icet.clothifystore.model.Item;
 import edu.icet.clothifystore.util.CategoryType;
 import edu.icet.clothifystore.util.DaoType;
 import org.modelmapper.ModelMapper;
@@ -17,20 +17,19 @@ import java.util.regex.Pattern;
 import static edu.icet.clothifystore.util.CategoryType.*;
 
 
-public class BoProductServiceImpl implements ProductBoService {
+public class BoItemServiceImpl implements ItemBoService {
 
-    private final ProductRepository productRepository = new DaoFactory().getDaoImpl(DaoType.PRODUCT);
+    private final ItemRepository itemRepository = new DaoFactory().getDaoImpl(DaoType.ITEM);
 
     private final ModelMapper modelMapper = new ModelMapper();
 
     @Override
     public <T extends Enum<CategoryType>> String generateId(T type) {
-        List<ProductEntity> productEntityList = productRepository.findAll();
+        List<ItemEntity> itemEntityList = itemRepository.findAll();
         List<String> ids = new ArrayList<>();
-        productEntityList.forEach(productEntity -> {
-            if (productEntity.getCategoryEntity().getCategoryType().equals(type.toString())) {
-                ids.add(productEntity.getId());
-            }
+        itemEntityList.forEach(itemEntity -> {
+            if (itemEntity.getProductEntity().getCategoryEntity().equals(type.toString()))
+                ids.add(itemEntity.getId());
         });
 
         String idPattern = null;
@@ -57,14 +56,14 @@ public class BoProductServiceImpl implements ProductBoService {
     }
 
     @Override
-    public Boolean save(Product object) {
+    public Boolean save(Item object) {
         //TODO: map object to entity
         //TODO: map category to entity
         return null;
     }
 
     @Override
-    public Boolean update(Product object) {
+    public Boolean update(Item object) {
         //TODO: retrieve by id
         //TODO: map object to entity
         //TODO: merge
@@ -78,7 +77,7 @@ public class BoProductServiceImpl implements ProductBoService {
     }
 
     @Override
-    public Product findById(String id) {
+    public Item findById(String id) {
         //TODO: retrieve product
         //TODO: map entity values to product and return
         return null;

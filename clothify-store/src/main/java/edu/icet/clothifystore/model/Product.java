@@ -10,19 +10,9 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
-    private String id;
+    private Integer productId;
     private String productName;
-    private Integer productSize;
-    private Double productPrice;
+    private String productDescription;
     private Integer productQuantity;
-
-    private Admin admin;
-
-    private Category category;
-
-    private Order order;
-
-    private Set<SupplierProduct> supplierProductSet;
-
-    private Set<OrderDetails> orderDetailsSet;
+    private Set<Item> itemSet;
 }

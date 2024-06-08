@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="443.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/21"
-            fx:controller="edu.icet.clothifystore.persistance.ProductFormController">
+            fx:controller="edu.icet.clothifystore.persistance.ItemFormController">
     <children>
         <TextField fx:id="txtProductName" layoutX="68.0" layoutY="123.0" promptText="Product Name"/>
         <TextField fx:id="txtProductSize" layoutX="68.0" layoutY="173.0" promptText="Product size"/>
@@ -14,19 +14,23 @@
         <Label layoutX="71.0" layoutY="87.0" text="ID :"/>
         <Label fx:id="lblProductId" layoutX="89.0" layoutY="87.0" prefHeight="17.0" prefWidth="76.0" text="PR-M001"/>
         <Button layoutX="76.0" layoutY="314.0" mnemonicParsing="false" onAction="#btnAddProductOnAction"
-                prefHeight="25.0" prefWidth="139.0" text="Add product"/>
+                prefHeight="25.0" prefWidth="139.0" text="Add item"/>
         <Button layoutX="76.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0"
-                prefWidth="139.0" text="Update product"/>
+                prefWidth="139.0" text="Update item"/>
         <Button layoutX="78.0" layoutY="391.0" mnemonicParsing="false" onAction="#btnSearchModeOnAction"
                 prefHeight="25.0" prefWidth="139.0" text="Search mode"/>
         <Button fx:id="btnSearch" disable="true" layoutX="168.0" layoutY="83.0" mnemonicParsing="false"
                 onAction="#btnSearchOnAction" text="Search"/>
-        <JFXComboBox fx:id="cmbCategory" layoutX="247.0" layoutY="83.0" onAction="#cmbCategoryOnAction"
+        <JFXComboBox fx:id="cmbCategory" layoutX="248.0" layoutY="83.0" onAction="#cmbCategoryOnAction"
                      prefHeight="25.0" prefWidth="101.0" promptText="Category"/>
         <Label layoutX="85.0" layoutY="14.0" text="Product panel">
             <font>
                 <Font size="27.0"/>
             </font>
         </Label>
+        <Label layoutX="234.0" layoutY="291.0" prefHeight="17.0" prefWidth="65.0" text="SupplierID :"/>
+        <Label fx:id="lblSupplierId" layoutX="266.0" layoutY="321.0" prefHeight="17.0" prefWidth="65.0" text="SUP001"/>
+        <JFXComboBox fx:id="cmbProductType" layoutX="248.0" layoutY="136.0" onAction="#cmbProductTypeOnAction"
+                     prefHeight="25.0" prefWidth="101.0" promptText="Product "/>
     </children>
 </AnchorPane>

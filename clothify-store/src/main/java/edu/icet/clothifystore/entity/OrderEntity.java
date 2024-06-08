@@ -29,7 +29,7 @@ public class OrderEntity {
     private EmployeeEntity employeeEntity;
 
     @OneToMany(mappedBy = "orderEntity")
-    private Set<ProductEntity> productEntitySet;
+    private Set<ItemEntity> itemEntitySet;
 
     @OneToMany(mappedBy = "orderEntity")
     private Set<OrderDetailsEntity> orderDetailsEntitySet;

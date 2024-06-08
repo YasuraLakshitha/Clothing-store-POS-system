@@ -1,5 +1,5 @@
 package edu.icet.clothifystore.util;
 
 public enum DaoType {
-    ADMIN, EMPLOYEE, PRODUCT, SUPPLIER
+    ADMIN, EMPLOYEE, PRODUCT, CATEGORY, ITEM, SUPPLIER
 }

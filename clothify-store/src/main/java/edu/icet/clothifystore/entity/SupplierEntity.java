@@ -1,8 +1,12 @@
 package edu.icet.clothifystore.entity;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.util.Set;
 
 @Data
@@ -20,5 +24,5 @@ public class SupplierEntity {
     private String item;
 
     @OneToMany(mappedBy = "supplierEntity")
-    private Set<SupplierProductEntity> supplierProductEntitySet;
+    private Set<SupplierItemEntity> supplierItemEntitySet;
 }

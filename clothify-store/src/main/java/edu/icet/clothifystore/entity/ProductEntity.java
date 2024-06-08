@@ -10,32 +10,19 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "product")
+@Entity
 public class ProductEntity {
     @Id
-    @Column(name = "product_id")
-    private String id;
+    private String productId;
     private String productName;
-    private Integer productSize;
-    private Double productPrice;
+    private String productDescription;
     private Integer productQuantity;
 
-    @ManyToOne
-    @JoinColumn(name = "admin_id")
-    private AdminEntity adminEntity;
+    @OneToMany(mappedBy = "productEntity")
+    private Set<ItemEntity> itemEntitySet;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "category_id")
     private CategoryEntity categoryEntity;
-
-    @ManyToOne
-    @JoinColumn(name = "order_id")
-    private OrderEntity orderEntity;
-
-    @OneToMany(mappedBy = "productEntity")
-    private Set<SupplierProductEntity> supplierProductEntitySet;
-
-    @OneToMany(mappedBy = "productEntity")
-    private Set<OrderDetailsEntity> orderDetailsEntities;
 
 }

@@ -1,6 +1,5 @@
 package edu.icet.clothifystore.model;
 
-import edu.icet.clothifystore.entity.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +15,6 @@ public class Order {
     private Customer customer;
     private Payment payment;
     private Employee employee;
-    private Set<Product> productSet;
+    private Set<Item> itemSet;
     private Set<OrderDetails> orderDetailsSet;
 }

@@ -7,6 +7,7 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.util.Set;
 
 @Data
@@ -23,8 +24,5 @@ public class AdminEntity {
 
     @OneToMany(mappedBy = "adminEntity")
     private Set<EmployeeEntity> employeeEntitySet;
-
-    @OneToMany(mappedBy = "adminEntity")
-    private Set<ProductEntity> productEntitySet;
 
 }

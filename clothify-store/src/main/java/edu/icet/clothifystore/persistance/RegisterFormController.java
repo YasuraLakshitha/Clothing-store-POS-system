@@ -69,7 +69,6 @@ public class RegisterFormController implements Initializable {
                         txtName.getText(),
                         txtEmail.getText(),
                         txtPassword.getText(),
-                        null,
                         null));
                 break;
 

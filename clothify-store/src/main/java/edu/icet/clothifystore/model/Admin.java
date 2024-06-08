@@ -15,5 +15,4 @@ public class Admin {
     private String adminPassword;
     private String adminEmail;
     private Set<Employee> employeeSet;
-    private Set<Product> productSet;
 }

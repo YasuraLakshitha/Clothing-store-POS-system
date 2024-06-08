@@ -21,11 +21,13 @@ public class HibernateUtil {
                 .addAnnotatedClass(PaymentTypeEntity.class)
                 .addAnnotatedClass(EmployeeEntity.class)
                 .addAnnotatedClass(AdminEntity.class)
-                .addAnnotatedClass(ProductEntity.class)
+                .addAnnotatedClass(ItemEntity.class)
                 .addAnnotatedClass(CategoryEntity.class)
                 .addAnnotatedClass(SupplierEntity.class)
-                .addAnnotatedClass(SupplierProductEntity.class)
-                .addAnnotatedClass(OrderDetailsEntity.class);
+                .addAnnotatedClass(SupplierItemEntity.class)
+                .addAnnotatedClass(OrderDetailsEntity.class)
+                .addAnnotatedClass(ItemEntity.class)
+                .addAnnotatedClass(ProductEntity.class);
         MetadataBuilder metadataBuilder = metadataSources.getMetadataBuilder();
         Metadata metadata = metadataBuilder.applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();

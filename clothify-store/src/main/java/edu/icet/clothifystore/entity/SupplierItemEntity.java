@@ -1,6 +1,6 @@
 package edu.icet.clothifystore.entity;
 
-import edu.icet.clothifystore.util.config.SupplierProductId;
+import edu.icet.clothifystore.util.config.SupplierItemId;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,15 +9,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "supplier_product")
-public class SupplierProductEntity {
+@Entity(name = "supplier_item")
+public class SupplierItemEntity {
     @EmbeddedId
-    private SupplierProductId id;
+    private SupplierItemId id;
 
     @ManyToOne
-    @MapsId("productId")
-    @JoinColumn(name = "product_id")
-    private ProductEntity productEntity;
+    @MapsId("itemId")
+    @JoinColumn(name = "item_id")
+    private ItemEntity itemEntity;
 
     @ManyToOne
     @MapsId("supplierId")

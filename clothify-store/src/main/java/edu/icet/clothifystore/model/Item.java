@@ -9,12 +9,18 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Supplier {
+public class Item {
     private String id;
-    private String supplierName;
-    private String supplierEmail;
-    private String supplierPassword;
-    private String companyName;
-    private String item;
+    private String productName;
+    private Integer productSize;
+    private Double productPrice;
+    private Integer productQuantity;
+
+    private Product product;
+
+    private Order order;
+
     private Set<SupplierItem> supplierItemSet;
+
+    private Set<OrderDetails> orderDetailsSet;
 }

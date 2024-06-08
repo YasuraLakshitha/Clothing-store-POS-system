@@ -14,5 +14,5 @@ public class Category {
     private String id;
     private String categoryType;
     private String categoryDescription;
-    private Set<Product> productSet;
+    private Set<Item> itemSet;
 }

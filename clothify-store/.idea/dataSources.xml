@@ -13,7 +13,7 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="a677a747-4be2-44a3-9ff0-2388b766faf0">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="5ebbe306-da72-42d1-b2d5-5386aa5d57fa">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>

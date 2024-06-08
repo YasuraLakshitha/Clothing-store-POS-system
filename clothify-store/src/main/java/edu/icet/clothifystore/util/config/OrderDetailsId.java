@@ -16,5 +16,5 @@ import java.io.Serializable;
 public class OrderDetailsId implements Serializable {
     private String orderId;
     private String employeeId;
-    private String productId;
+    private String itemId;
 }

@@ -25,7 +25,7 @@ public class OrderDetailsEntity {
     private OrderEntity orderEntity;
 
     @ManyToOne
-    @MapsId("productId")
-    @JoinColumn(name = "product_id")
-    private ProductEntity productEntity;
+    @MapsId("itemId")
+    @JoinColumn(name = "item_id")
+    private ItemEntity itemEntity;
 }

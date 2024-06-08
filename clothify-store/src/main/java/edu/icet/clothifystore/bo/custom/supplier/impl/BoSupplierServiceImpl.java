@@ -4,9 +4,8 @@ import edu.icet.clothifystore.bo.custom.supplier.BoSupplierService;
 import edu.icet.clothifystore.dao.DaoFactory;
 import edu.icet.clothifystore.dao.custom.supplier.SupplierRepository;
 import edu.icet.clothifystore.entity.SupplierEntity;
-import edu.icet.clothifystore.entity.SupplierProductEntity;
 import edu.icet.clothifystore.model.Supplier;
-import edu.icet.clothifystore.model.SupplierProduct;
+import edu.icet.clothifystore.model.SupplierItem;
 import edu.icet.clothifystore.util.DaoType;
 import org.modelmapper.ModelMapper;
 
@@ -71,9 +70,9 @@ public class BoSupplierServiceImpl implements BoSupplierService {
     public Supplier findSupplierByEmail(String email) {
         SupplierEntity supplierEntity = repository.findByEmail(email);
         Supplier supplier = modelMapper.map(supplierEntity, Supplier.class);
-        supplierEntity.getSupplierProductEntitySet().forEach(supplierProductEntity -> {
-            supplier.getSupplierProductSet().add(
-                    modelMapper.map(supplierProductEntity, SupplierProduct.class)
+        supplierEntity.getSupplierItemEntitySet().forEach(supplierItemEntity -> {
+            supplier.getSupplierItemSet().add(
+                    modelMapper.map(supplierItemEntity, SupplierItem.class)
             );
         });
         return supplier;

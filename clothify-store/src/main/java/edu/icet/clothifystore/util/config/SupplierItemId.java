@@ -1,6 +1,5 @@
 package edu.icet.clothifystore.util.config;
 
-import edu.icet.clothifystore.entity.ProductEntity;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +13,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Embeddable
-public class SupplierProductId implements Serializable {
+public class SupplierItemId implements Serializable {
     private String supplierId;
-    private String productId;
+    private String itemId;
 }

@@ -1,16 +1,16 @@
 package edu.icet.clothifystore.bo.custom.admin.impl;
 
 import edu.icet.clothifystore.bo.custom.admin.BoServiceAdmin;
-import edu.icet.clothifystore.dao.custom.admin.AdminRepository;
 import edu.icet.clothifystore.dao.DaoFactory;
+import edu.icet.clothifystore.dao.custom.admin.AdminRepository;
 import edu.icet.clothifystore.entity.AdminEntity;
 import edu.icet.clothifystore.entity.EmployeeEntity;
-import edu.icet.clothifystore.entity.ProductEntity;
 import edu.icet.clothifystore.model.Admin;
 import edu.icet.clothifystore.model.Employee;
-import edu.icet.clothifystore.model.Product;
+import edu.icet.clothifystore.model.Item;
 import edu.icet.clothifystore.util.DaoType;
 import org.modelmapper.ModelMapper;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -35,7 +35,6 @@ public class BoAdminServiceImpl implements BoServiceAdmin {
     @Override
     public Boolean update(Admin object) {
         Set<EmployeeEntity> employeeEntitySet = new HashSet<>();
-        Set<ProductEntity> productEntitySet = new HashSet<>();
 
         for (Employee employee : object.getEmployeeSet()) {
             EmployeeEntity employeeEntity = modelMapper.map(employee, EmployeeEntity.class);
@@ -43,15 +42,8 @@ public class BoAdminServiceImpl implements BoServiceAdmin {
             employeeEntitySet.add(employeeEntity);
         }
 
-        for (Product product : object.getProductSet()) {
-            ProductEntity productEntity = modelMapper.map(product, ProductEntity.class);
-            productEntity.setAdminEntity(modelMapper.map(object, AdminEntity.class));
-            productEntitySet.add(productEntity);
-        }
-
         AdminEntity adminEntity = modelMapper.map(object, AdminEntity.class);
         adminEntity.setEmployeeEntitySet(employeeEntitySet);
-        adminEntity.setProductEntitySet(productEntitySet);
         return repository.update(adminEntity);
     }
 
@@ -117,16 +109,12 @@ public class BoAdminServiceImpl implements BoServiceAdmin {
         AdminEntity adminEntity = repository.findAdminByEmail(email);
         Admin admin = modelMapper.map(adminEntity, Admin.class);
         Set<Employee> employeeSet = new HashSet<>();
-        Set<Product> productSet = new HashSet<>();
+        Set<Item> itemSet = new HashSet<>();
 
         adminEntity.getEmployeeEntitySet().forEach(employeeEntity ->{
             employeeSet.add(modelMapper.map(employeeEntity,Employee.class));
         });
-        adminEntity.getProductEntitySet().forEach(productEntity ->{
-            productSet.add(modelMapper.map(productEntity,Product.class));
-        });
         admin.setEmployeeSet(employeeSet);
-        admin.setProductSet(productSet);
         return admin;
     }
 

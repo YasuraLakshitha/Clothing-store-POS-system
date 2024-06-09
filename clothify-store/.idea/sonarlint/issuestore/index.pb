@@ -122,8 +122,6 @@ w
 G.idea/sonarlint/issuestore/2/7/27685ff0cafbda245b054670c331e414d36c1961,9\7\9744ced4ad1d3fc206bd4529224ac6b180ac2d04
 ;
 qodana.yaml,8\5\85c3a901608a6b9adf48d245fa84828b66304e51
-{
-Ksrc/main/java/edu/icet/clothifystore/persistance/ProductFormController.java,2\6\26e648704f1bcb4a102ccf2e41691c3ecbe1b4b5
 k
 ;src/main/java/edu/icet/clothifystore/util/CategoryType.java,1\a\1aa5be5c811a766c4bc77c8529196823d63f54f5
 e
@@ -186,14 +184,6 @@ l
 <src/main/java/edu/icet/clothifystore/model/SupplierItem.java,8\4\8460429240547f57418eeeba1eb96c34f1097367
 s
 Csrc/main/java/edu/icet/clothifystore/entity/SupplierItemEntity.java,e\a\ea63053da10ba2b05541e96615967a9fe8f2b792
-„
-Tsrc/main/java/edu/icet/clothifystore/dao/custom/product/impl/ItemRepositoryImpl.java,5\5\55530a064a13790c35ba5ce70dc56974d1eb767e
-{
-Ksrc/main/java/edu/icet/clothifystore/dao/custom/product/ItemRepository.java,1\9\1960b5d3bd75ed3704bbba16f606cf6be9b3c216
-y
-Isrc/main/java/edu/icet/clothifystore/bo/custom/product/ItemBoService.java,e\5\e58efa900ecbfac2f61871dd6568ad84b50bfe9c
-‚
-Rsrc/main/java/edu/icet/clothifystore/bo/custom/product/impl/BoItemServiceImpl.java,e\2\e25095343f853cd06ad57848942f180aad7376f2
 
 Osrc/main/java/edu/icet/clothifystore/bo/custom/item/impl/BoItemServiceImpl.java,8\d\8d156d7f72f54f266328f6d1a2d349662f2364ff
 x
@@ -204,3 +194,21 @@ x
 Hsrc/main/java/edu/icet/clothifystore/dao/custom/item/ItemRepository.java,e\3\e37cfde37f478f1a4bcdffda65832637aff1d7f2
 v
 Fsrc/main/java/edu/icet/clothifystore/bo/custom/item/ItemBoService.java,4\3\43da3a7e4b5d38d60f496153973d0d24f51b33fa
+~
+Nsrc/main/java/edu/icet/clothifystore/dao/custom/product/ProductRepository.java,9\3\934ce4d3602bee98d7211ae268cb22cbf3d44faa
+‡
+Wsrc/main/java/edu/icet/clothifystore/dao/custom/product/impl/ProductRepositoryImpl.java,a\d\adf4ac9caa90cdbf0518d00f8edcde43bcb56b33
+|
+Lsrc/main/java/edu/icet/clothifystore/bo/custom/product/BoProductService.java,6\d\6db65a5253973037e958997a7df5ac304fa67643
+…
+Usrc/main/java/edu/icet/clothifystore/bo/custom/product/impl/BoProductServiceImpl.java,f\7\f7ecf5eb29781a62b27305e5aa177ab3ed6c2001
+
+Osrc/main/java/edu/icet/clothifystore/bo/custom/item/impl/ItemBoServiceImpl.java,4\d\4d1f394ebc58ffc5a5ce0037cdfc85179bab457d
+|
+Lsrc/main/java/edu/icet/clothifystore/util/product_type/MensProductTypes.java,3\7\370a7cbd97dd6fd9325fa118f2351a69d7945f3f
+~
+Nsrc/main/java/edu/icet/clothifystore/util/product_type/WomensProductTypes.java,1\8\18500576f7f230cf09b875f084c8e011f4efd427
+|
+Lsrc/main/java/edu/icet/clothifystore/util/product_type/KidsProductTypes.java,4\0\40c424cd5da7e7c0317518e121926f224ebd8216
+}
+Msrc/main/java/edu/icet/clothifystore/util/product_type/WomenProductTypes.java,7\1\7131255ccc74e9ea27ba15c91330862dc120c5b9

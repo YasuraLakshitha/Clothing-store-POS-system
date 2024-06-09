@@ -15,7 +15,7 @@ public class ItemEntity {
     @Id
     @Column(name = "item_id")
     private String id;
-    private String itemBrand;
+    private String itemName;
     private Integer itemSize;
     private Double itemPrice;
     private Integer itemQuantity;
@@ -32,5 +32,5 @@ public class ItemEntity {
     private Set<SupplierItemEntity> supplieritemEntitySet;
 
     @OneToMany(mappedBy = "itemEntity")
-    private Set<OrderDetailsEntity> orderDetailsEntities;
+    private Set<OrderDetailsEntity> orderDetailsEntitySet;
 }

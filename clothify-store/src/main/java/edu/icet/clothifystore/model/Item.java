@@ -11,10 +11,10 @@ import java.util.Set;
 @NoArgsConstructor
 public class Item {
     private String id;
-    private String productName;
-    private Integer productSize;
-    private Double productPrice;
-    private Integer productQuantity;
+    private String itemName;
+    private Integer itemSize;
+    private Double itemPrice;
+    private Integer itemQuantity;
 
     private Product product;
 

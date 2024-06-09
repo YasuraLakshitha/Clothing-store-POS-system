@@ -4,9 +4,13 @@ import com.jfoenix.controls.JFXComboBox;
 import edu.icet.clothifystore.bo.BoFactory;
 import edu.icet.clothifystore.bo.custom.category.CategoryService;
 import edu.icet.clothifystore.bo.custom.item.ItemBoService;
+import edu.icet.clothifystore.bo.custom.product.BoProductService;
+import edu.icet.clothifystore.model.Item;
+import edu.icet.clothifystore.model.Product;
 import edu.icet.clothifystore.util.BoType;
 import edu.icet.clothifystore.util.CategoryType;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,9 +23,11 @@ import java.util.ResourceBundle;
 
 public class ItemFormController implements Initializable {
 
-    private final ItemBoService itemBoService = new BoFactory().createBoImpl(BoType.ITEM);
+    private final ItemBoService itemService = new BoFactory().createBoImpl(BoType.ITEM);
 
     private final CategoryService categoryService = new BoFactory().createBoImpl(BoType.CATEGORY);
+
+    private final BoProductService productService = new BoFactory().createBoImpl(BoType.PRODUCT);
 
     @FXML
     public Button btnSearch;
@@ -33,23 +39,22 @@ public class ItemFormController implements Initializable {
     public JFXComboBox<String> cmbProductType;
 
     @FXML
+    public Label lblItemId;
+
+    @FXML
+    public TextField txtItemName;
+
+    @FXML
+    public TextField txtItemSize;
+
+    @FXML
+    public TextField txtItemPrice;
+
+    @FXML
+    public TextField txtItemQty;
+
+    @FXML
     private JFXComboBox<Enum<CategoryType>> cmbCategory;
-
-    @FXML
-    private Label lblProductId;
-
-    @FXML
-    private TextField txtProductQty;
-
-    @FXML
-    private TextField txtProductName;
-
-    @FXML
-    private TextField txtProductPrice;
-
-    @FXML
-    private TextField txtProductSize;
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,8 +63,18 @@ public class ItemFormController implements Initializable {
     }
 
     @FXML
-    void btnAddProductOnAction(ActionEvent event) {
-
+    void btnAddItemOnAction(ActionEvent event) {
+        itemService.save(new Item(
+                lblItemId.getText(),
+                txtItemName.getText(),
+                Integer.parseInt(txtItemSize.getText()),
+                Double.parseDouble(txtItemPrice.getText()),
+                Integer.parseInt(txtItemQty.getText()),
+                productService.findByType(cmbProductType.getValue()),
+                null,//TODO: find order By Id
+                null,//TODO: add to supplieritemset
+                null//TODO: add to  orderDetailsEntitySet
+        ));
         //TODO: save product
         //TODO: update quantity
         //TODO: update category set
@@ -68,12 +83,13 @@ public class ItemFormController implements Initializable {
 
     @FXML
     public void cmbCategoryOnAction(ActionEvent actionEvent) {
-        setItemId();
+        loadProducts();
     }
+
 
     @FXML
     void btnSearchModeOnAction(ActionEvent event) {
-        //TODO: Enable search
+        btnSearch.setDisable(false);
     }
 
     @FXML
@@ -90,7 +106,7 @@ public class ItemFormController implements Initializable {
 
     @FXML
     public void cmbProductTypeOnAction(ActionEvent actionEvent) {
-        //TODO: load products
+        setItemId();
     }
 
     private void loadCategory() {
@@ -102,9 +118,18 @@ public class ItemFormController implements Initializable {
         ));
     }
 
-    public void setItemId() {
-        lblProductId.setText(itemBoService.generateId(cmbCategory.getValue()));
+    private void setItemId() {
+        lblItemId.setText(itemService.setItemId(cmbProductType.getValue()));
     }
+
+    private void loadProducts() {
+        ObservableList<String> productList = FXCollections.observableArrayList();
+        for (Product product : productService.getByCategoryType(cmbCategory.getValue())) {
+            productList.add(product.getProductName());
+        }
+        cmbProductType.setItems(productList);
+    }
+
 }
 
 

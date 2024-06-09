@@ -10,9 +10,10 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
-    private Integer productId;
+    private String productId;
     private String productName;
     private String productDescription;
     private Integer productQuantity;
     private Set<Item> itemSet;
+    private Category category;
 }

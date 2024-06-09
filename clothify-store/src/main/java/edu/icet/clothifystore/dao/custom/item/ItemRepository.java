@@ -8,4 +8,6 @@ import java.util.List;
 public interface ItemRepository extends Crud<ItemEntity, String> {
 
     List<ItemEntity> findAll();
+
+    List<ItemEntity> getByProductType(String type);
 }

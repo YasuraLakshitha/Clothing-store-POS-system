@@ -14,7 +14,9 @@ public class ItemRepositoryImpl implements ItemRepository {
 
     @Override
     public Boolean save(ItemEntity itemEntity) {
-        //TODO: save item
+        session.beginTransaction();
+        session.persist(itemEntity);
+        session.getTransaction().commit();
         //TODO: update inventory
         return null;
     }
@@ -41,6 +43,15 @@ public class ItemRepositoryImpl implements ItemRepository {
     public List<ItemEntity> findAll() {
         session.beginTransaction();
         List<ItemEntity> itemEntityList = session.createQuery("from item", ItemEntity.class).getResultList();
+        session.getTransaction().commit();
+        return itemEntityList;
+    }
+
+    @Override
+    public List<ItemEntity> getByProductType(String type) {
+        session.beginTransaction();
+        List<ItemEntity> itemEntityList = session.createQuery("from item where productEntity.productName = :productType", ItemEntity.class)
+                .setParameter("productType", type).list();
         session.getTransaction().commit();
         return itemEntityList;
     }

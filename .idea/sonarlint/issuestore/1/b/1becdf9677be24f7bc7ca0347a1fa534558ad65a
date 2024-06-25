@@ -1,0 +1,9 @@
+
+¡
+java:S1598"äThis file "BoAdminServiceImpl.java" should be located in "edu\icet\clothify\bo\custom\admin\impl" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\bo\custom\admin\impl"(Do not use dots in directory names).(óÈ‚ÂJ$cb5f7257-bac5-4487-bf51-4d94acedb049
+i
+java:S1144O"-Remove this unused private "getAdmin" method.(€¨öÓJ$7266f289-d334-4c75-a055-a1d37dcaea6c
+w
+java:S63537"<Use concise character class syntax '\\d' instead of '[0-9]'.(Ó¢ýCJ$c63d4e60-afba-4813-9a3f-e7866072a465
+g
+java:S1602D",Remove useless curly braces around statement(ñ¬ŒoJ$e1e20a49-4be8-4f02-8b41-84ef50c50dd7

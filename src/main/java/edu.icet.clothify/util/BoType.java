@@ -1,0 +1,5 @@
+package edu.icet.clothify.util;
+
+public enum BoType {
+    EMPLOYEE, ADMIN, PRODUCT, CATEGORY, SUPPLIER, ORDER, CUSTOMER, ORDER_DETAILS, PAYMENT, PAYMENT_TYPE, ITEM
+}

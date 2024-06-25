@@ -1,0 +1,24 @@
+
+µ
+java:S1598"ìThis file "CustomerReportFormController.java" should be located in "edu\icet\clothify\persistence\reports" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\persistence\reports"(Do not use dots in directory names).(ò²­Ÿıÿÿÿÿ8»¨‚…2J$428bc617-2887-4429-af41-e03bb8d6d22a
+	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¼¨‚…2J$98d64440-6509-497a-948b-ea4e5c362d72
+r
+java:S1481"/Remove this unused "jasperView" local variable.(˜³Ûä8¿¨‚…2J$3815d64d-2353-49eb-afa1-bf74f7e3e6f4
+k	java:S108")Either remove or fill this block of code.(”ı¾8¿¨‚…2J$ac02421c-8581-4366-b467-eb90fc548cf0
+f
+java:S1128"DRemove this unused import 'edu.icet.clothify.entity.CustomerEntity'.(½ë§°ùÿÿÿÿ8ƒƒÍ‚…2
+c
+java:S1128"ARemove this unused import 'edu.icet.clothify.util.HibernateUtil'.(Ä»Ò”øÿÿÿÿ8ƒƒÍ‚…2
+z
+java:S1128"XRemove this unused import 'net.sf.jasperreports.engine.data.JRBeanCollectionDataSource'.(¦ŸŸ˜ıÿÿÿÿ8ƒƒÍ‚…2
+c
+java:S1128
+"FRemove this unused import 'net.sf.jasperreports.engine.util.JRLoader'.(¤±–8ƒƒÍ‚…2
+T
+java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ƒƒÍ‚…2
+M
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8ƒƒÍ‚…2
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ƒƒÍ‚…2
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ƒƒÍ‚…2

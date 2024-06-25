@@ -1,0 +1,21 @@
+
+“
+java:S1598"ÖThis file "RegisterFormController.java" should be located in "edu\icet\clothify\persistence" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\persistence"(Do not use dots in directory names).(Û¬J$60349517-1a66-498f-a0ee-96da7153b6f7
+Š
+java:S1192C"IDefine a constant instead of duplicating this literal "Employee" 6 times.(ıÏä–øÿÿÿÿJ$e90f1fa9-124e-421b-bf0f-7cfa1140bfe1
+Š
+java:S1192Q"IDefine a constant instead of duplicating this literal "Supplier" 4 times.(×ÒäúÿÿÿÿJ$ef6b16ee-9232-4612-9546-c6e56f13b52b
+‚
+java:S1192:"FDefine a constant instead of duplicating this literal "Admin" 6 times.(Œº’üJ$febbb4b9-c657-4b3c-9881-f2481480e928
+s
+java:S11728"2Remove this unused method parameter "actionEvent".(İ¤ß›ûÿÿÿÿJ$1306b9d9-1425-4dd7-aa46-e966c5a4e369
+b	java:S1319""Add a default case to this switch.(“öêèÿÿÿÿÿJ$22a1eae1-93ee-4574-b148-c7a7f5b9fd11
+s
+java:S1172q"2Remove this unused method parameter "actionEvent".(Â®ö¬ıÿÿÿÿJ$320aa7e4-e3a3-4506-8f06-d48c9b928fa2
+]	java:S131s""Add a default case to this switch.(øœ°®J$441959d9-3f24-4cb3-9521-077158dee3b2
+l	java:S106—"+Replace this use of System.out by a logger.(ìÌäÌşÿÿÿÿJ$2b222734-7733-4a3e-8f80-4771222d4dca
+
+java:S1301˜"KReplace this "switch" statement by "if" statements to increase readability.(›ôúÿÿÿÿJ$828f6cb3-5e5b-4e19-a4b6-5f0c42e89030
+c	java:S131˜""Add a default case to this switch.(›ôúÿÿÿÿJ$25f90d14-3338-4145-b683-909333a830fa
+t
+java:S1172¤"2Remove this unused method parameter "actionEvent".(–¸ŒäúÿÿÿÿJ$e5d1fa4a-1878-4b5a-9e4d-a009de101383

@@ -1,0 +1,5 @@
+package edu.icet.clothify.util;
+
+public enum DaoType {
+    ADMIN, EMPLOYEE, PRODUCT, CATEGORY, ITEM, ORDER, CUSTOMER, ORDER_DETAILS, PAYMENT, PAYMENT_TYPE, SUPPLIER
+}

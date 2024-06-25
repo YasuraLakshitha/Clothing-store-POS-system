@@ -1,0 +1,9 @@
+
+¶
+java:S1598"íThis file "PaymentRepositoryImpl.java" should be located in "edu\icet\clothify\dao\custom\payment\impl" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\dao\custom\payment\impl"(Do not use dots in directory names).(ë‡Îüÿÿÿÿ8 ­žö„2J$da3f1336-a67c-4b09-9893-f3e5386653e3
+v
+java:S1874?"3Remove this use of "createQuery"; it is deprecated.(‹ïÆæ8§­žö„2J$62a12a85-af2d-4d76-b9c4-7976ebee51e3
+„
+java:S1128"ARemove this unused import 'edu.icet.clothify.entity.OrderEntity'.(Ì­†8¼É¡ö„2J$6c0e9ff8-070f-483b-98b4-8d667d7f3d8b
+
+java:S1128">Remove this unused import 'jakarta.transaction.Transactional'.(ß–Ê³8½É¡ö„2J$d63bc288-158d-4b39-867c-0c2a665e88e1

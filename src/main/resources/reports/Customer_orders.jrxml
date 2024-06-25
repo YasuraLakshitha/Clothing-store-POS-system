@@ -1,0 +1,184 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Customer_orders" language="java" pageWidth="842" pageHeight="595" orientation="Landscape"
+              columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20"
+              uuid="b7972708-4e6c-492e-9f6b-4061f09bbc40">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="457"/>
+    <property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="530"/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="customer_orders"/>
+    <dataset name="Dataset1" uuid="3f44d92d-44d4-4f3e-8a2b-53fb52e49f6f">
+        <query language="sql"><![CDATA[]]></query>
+    </dataset>
+    <query language="SQL"><![CDATA[select * from customer,customer_order,product]]></query>
+    <field name="customer_id" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="customer_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="customer_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+    </field>
+    <field name="customerContact" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="customerContact"/>
+        <property name="com.jaspersoft.studio.field.label" value="customerContact"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+    </field>
+    <field name="customerEmail" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="customerEmail"/>
+        <property name="com.jaspersoft.studio.field.label" value="customerEmail"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+    </field>
+    <field name="customerName" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="customerName"/>
+        <property name="com.jaspersoft.studio.field.label" value="customerName"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+    </field>
+    <field name="order_id" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="order_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="order_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer_order"/>
+    </field>
+    <field name="state" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="state"/>
+        <property name="com.jaspersoft.studio.field.label" value="state"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer_order"/>
+    </field>
+    <field name="COLUMN_7" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="customer_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="customer_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer_order"/>
+    </field>
+    <field name="employee_id" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="employee_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="employee_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="customer_order"/>
+    </field>
+    <field name="id" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+    </field>
+    <field name="productDescription" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="productDescription"/>
+        <property name="com.jaspersoft.studio.field.label" value="productDescription"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+    </field>
+    <field name="productName" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="productName"/>
+        <property name="com.jaspersoft.studio.field.label" value="productName"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+    </field>
+    <field name="productPrice" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="productPrice"/>
+        <property name="com.jaspersoft.studio.field.label" value="productPrice"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+    </field>
+    <field name="productQuantity" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="productQuantity"/>
+        <property name="com.jaspersoft.studio.field.label" value="productQuantity"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+    </field>
+    <field name="category_id" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="category_id"/>
+        <property name="com.jaspersoft.studio.field.label" value="category_id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="product"/>
+    </field>
+    <group name="customer_id">
+        <expression><![CDATA[$F{customer_id}]]></expression>
+    </group>
+    <group name="customerContact">
+        <expression><![CDATA[$F{customerContact}]]></expression>
+    </group>
+    <group name="customerEmail">
+        <expression><![CDATA[$F{customerEmail}]]></expression>
+    </group>
+    <group name="customerName">
+        <expression><![CDATA[$F{customerName}]]></expression>
+    </group>
+    <group name="order_id">
+        <expression><![CDATA[$F{order_id}]]></expression>
+    </group>
+    <group name="state">
+        <expression><![CDATA[$F{state}]]></expression>
+    </group>
+    <group name="COLUMN_7">
+        <expression><![CDATA[$F{COLUMN_7}]]></expression>
+    </group>
+    <group name="employee_id">
+        <expression><![CDATA[$F{employee_id}]]></expression>
+    </group>
+    <group name="id">
+        <expression><![CDATA[$F{id}]]></expression>
+    </group>
+    <group name="productDescription">
+        <expression><![CDATA[$F{productDescription}]]></expression>
+    </group>
+    <group name="productName">
+        <expression><![CDATA[$F{productName}]]></expression>
+    </group>
+    <group name="productPrice">
+        <expression><![CDATA[$F{productPrice}]]></expression>
+    </group>
+    <group name="productQuantity">
+        <expression><![CDATA[$F{productQuantity}]]></expression>
+    </group>
+    <group name="category_id">
+        <expression><![CDATA[$F{category_id}]]></expression>
+    </group>
+    <background splitType="Stretch"/>
+    <title height="134" splitType="Stretch">
+        <element kind="staticText" uuid="59fbe414-3f08-4dd1-99cf-0c4ba92f0e74" x="0" y="0" width="780" height="82"
+                 fontSize="30.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[Customer Orders
+Clothify Store]]></text>
+        </element>
+        <element kind="line" uuid="4d5db0cf-93d2-4232-8166-470d718a0b63" x="0" y="100" width="780" height="1"/>
+    </title>
+    <pageHeader splitType="Stretch"/>
+    <columnHeader height="45" splitType="Stretch">
+        <element kind="staticText" uuid="a872e95e-ed70-4782-bc4c-3e1991d5240e" x="160" y="0" width="130" height="30"
+                 fontSize="16.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[order_id]]></text>
+        </element>
+        <element kind="staticText" uuid="b7a815f6-d434-49e5-968a-c37f6bd29aa5" x="0" y="0" width="160" height="30"
+                 fontSize="16.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[customer_id]]></text>
+        </element>
+        <element kind="staticText" uuid="4b369d7b-b8dc-468a-9e51-43d8efbfeef7" x="682" y="0" width="138" height="30"
+                 fontSize="16.0" bold="true">
+            <text><![CDATA[customerContact]]></text>
+        </element>
+        <element kind="staticText" uuid="ba089d70-1ad0-42d1-b409-b32d39e665ed" x="290" y="0" width="180" height="30"
+                 fontSize="16.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[customerName]]></text>
+        </element>
+        <element kind="staticText" uuid="5ddb46f4-9145-4e6e-87ae-b07775fb029c" x="470" y="0" width="212" height="30"
+                 fontSize="16.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[customerEmail]]></text>
+        </element>
+    </columnHeader>
+    <detail>
+        <band height="44" splitType="Stretch">
+            <element kind="textField" uuid="a5be4980-8e69-45a5-b809-febca1795648" x="672" y="10" width="138" height="30"
+                     fontSize="14.0">
+                <expression><![CDATA[$F{customerContact}]]></expression>
+            </element>
+            <element kind="textField" uuid="f9acbbc7-8276-447f-9df3-17e10c6aefab" x="280" y="10" width="180" height="30"
+                     fontSize="14.0" hTextAlign="Center">
+                <expression><![CDATA[$F{customerName}]]></expression>
+            </element>
+            <element kind="textField" uuid="481d89c6-a8df-4d44-8bd8-57522690e126" x="0" y="10" width="160" height="30"
+                     fontSize="14.0" hTextAlign="Center">
+                <expression><![CDATA[$F{customer_id}]]></expression>
+            </element>
+            <element kind="textField" uuid="11a1f9fa-9357-4dff-90a3-e74195085356" x="160" y="10" width="120" height="30"
+                     fontSize="16.0" hTextAlign="Center">
+                <expression><![CDATA[$F{order_id}]]></expression>
+            </element>
+            <element kind="textField" uuid="e880eff9-9857-4995-887f-15c2ba9f2443" x="460" y="10" width="212" height="30"
+                     fontSize="14.0" hTextAlign="Center">
+                <expression><![CDATA[$F{customerEmail}]]></expression>
+            </element>
+        </band>
+    </detail>
+    <columnFooter splitType="Stretch"/>
+    <pageFooter splitType="Stretch"/>
+    <summary splitType="Stretch"/>
+</jasperReport>

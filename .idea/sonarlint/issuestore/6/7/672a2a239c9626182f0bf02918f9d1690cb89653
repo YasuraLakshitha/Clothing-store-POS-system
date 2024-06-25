@@ -1,0 +1,8 @@
+
+¹
+java:S1598"ğThis file "OtpGateway.java" should be located in "edu\icet\clothify\util\email_to_sms_gatewaylayer" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\util\email_to_sms_gatewaylayer"(Do not use dots in directory names).(ãÿ„ıÿÿÿÿ8ì©Ìö„2J$d4799643-166a-473e-9a91-a49537894089
+	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8í©Ìö„2J$452e271f-e2e5-402d-a7a5-421649ac1c34
+f
+java:S2119"Save and re-use this "Random".(šŸ«íøÿÿÿÿ8ö©Ìö„2J$7f559ee5-2932-4520-b66e-4057556da04e
+y
+java:S6437!"6Revoke and change this password, as it is compromised.(ìÊÊœ8€ªÌö„2J$0d8de8b7-a855-4798-a440-c51d7cd63c4c

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="591.0" prefWidth="764.0"
+            xmlns="http://javafx.com/javafx/21">
+    <children>
+        <TabPane fx:id="" layoutY="2.4" prefHeight="698.0" prefWidth="764.0" tabClosingPolicy="UNAVAILABLE"
+                 AnchorPane.bottomAnchor="-109.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="2.0">
+            <tabs>
+                <Tab fx:id="orderPanelTab" text="Order panel">
+                    <content>
+                        <fx:include source="order-panel-form.fxml"/>
+                    </content>
+                </Tab>
+                <Tab fx:id="itemTab" text="Item panel">
+                    <content>
+                        <fx:include source="item-from.fxml"/>
+                    </content>
+                </Tab>
+                <Tab fx:id="viewOrderTab" text="View Orders">
+                    <content>
+                        <fx:include source="order-view-form.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Customer Report">
+                    <content>
+                        <fx:include source="customer-report-form.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

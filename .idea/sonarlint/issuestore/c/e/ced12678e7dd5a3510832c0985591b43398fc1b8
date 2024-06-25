@@ -1,0 +1,34 @@
+
+j
+java:S5411<"(Use a primitive boolean expression here.(ŸÓ´V8ëä¶ú„2J$57ae8060-4633-4fec-b774-be86197c7d24
+k
+java:S5411F"(Use a primitive boolean expression here.(®í¨è8ëä¶ú„2J$c7d87efb-1359-4e7e-9556-cfb499fd3185
+k
+java:S5411P"(Use a primitive boolean expression here.(°£ë8ëä¶ú„2J$9608cfdd-4d68-430f-b691-bb7cecfe0480
+™
+java:S1104""WMake staffMember a static final constant or non-public and provide accessors if needed.(Åó°}8ëä¶ú„2J$b87f70a2-440f-4414-a289-639b6ae15e2f
+q
+java:S1066<"/Merge this if statement with the enclosing one.(ŸÓ´V8ëä¶ú„2J$80305bd1-21cc-4a17-b3bd-6c4efe3dba18
+r
+java:S1066F"/Merge this if statement with the enclosing one.(®í¨è8ëä¶ú„2J$cd923450-0dda-4213-9e92-d36a7d186298
+r
+java:S1066P"/Merge this if statement with the enclosing one.(°£ë8ëä¶ú„2J$f0c8b0f6-1856-4d88-a9d0-27e1bc538b76
+›
+java:S1598"×This file "LoginPageFormController.java" should be located in "edu\icet\clothify\persistence" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\persistence"(Do not use dots in directory names).(Û¬8ìä¶ú„2J$7d2ebdab-8b21-47cd-8cc4-550365d24d5b
+s
+java:S1444""1Make this "public static staffMember" field final(Åó°}8ìä¶ú„2J$0b672b44-e2ed-4670-aa08-70ab2dff6acf
+Œ
+java:S11923"IDefine a constant instead of duplicating this literal "Employee" 3 times.(ıíÊÊ8íä¶ú„2J$6088eb1b-fad6-4362-b825-0e5744bad67a
+ 
+java:S1192="XDefine a constant instead of duplicating this literal "Enter new password here" 3 times.(äÿùíıÿÿÿÿ8íä¶ú„2J$da7d13aa-2acc-4690-b323-48a65d7da43c
+“
+java:S1192>"PDefine a constant instead of duplicating this literal "Change Password" 3 times.(Áé²Â8íä¶ú„2J$1a9774a1-1d49-41a1-840e-9f33529ea3f4
+‰
+java:S11923"FDefine a constant instead of duplicating this literal "Admin" 3 times.(ıíÊÊ8íä¶ú„2J$521271e4-e5ce-40ab-b737-dcb954eab6fb
+š
+java:S37767"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(àœ×êùÿÿÿÿ8ñä¶ú„2J$e925d92f-1553-499b-a6cb-ed00e7f79c1f
+i	java:S1318""Add a default case to this switch.(“öêèÿÿÿÿÿ8ñä¶ú„2J$3e9be87a-ec4d-4636-9db8-c4f95462b2c0
+~
+java:S2696`"6Make the enclosing method "static" or remove this set.(¦Èµşÿÿÿÿ8óä¶ú„2J$3237dd8b-f595-47a1-becb-2a8088d16142
+y
+java:S2696p"6Make the enclosing method "static" or remove this set.(‚ô®À8÷ä¶ú„2J$ed054649-6783-4830-bfd5-5370b7ba99c2

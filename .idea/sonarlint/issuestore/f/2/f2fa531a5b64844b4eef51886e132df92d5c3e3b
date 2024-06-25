@@ -1,0 +1,10 @@
+
+™	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èë üÿÿÿÿ8×øéò„2J$30b27ad9-803d-40c1-bc05-bc440a0161f7
+™
+java:S11042"VMake tblProduct a static final constant or non-public and provide accessors if needed.(µŸÃ€8×øéò„2J$9048945f-21a5-413d-b774-59152dcaa3be
+›
+java:S1598"×This file "OrderViewFormController.java" should be located in "edu\icet\clothify\persistence" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\persistence"(Do not use dots in directory names).(Û¬8Ùøéò„2J$f02e4776-13ff-4027-af94-26068f122888
+x
+java:S1481•"/Remove this unused "productSet" local variable.(ÍïÚòüÿÿÿÿ8èøéò„2J$b1e3a3d8-b0d4-403f-a107-9c0083269603
+o
+java:S1068""'Remove this unused "log" private field.(Û¯¤ßúÿÿÿÿ8íøéò„2J$0cd5c82a-8776-4b90-9ac8-a9b46eb1d8e9

@@ -1,0 +1,8 @@
+
+Â
+java:S1598"ùThis file "AnnotationProccesor.java" should be located in "edu\icet\clothify\util\email_to_sms_gatewaylayer" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\util\email_to_sms_gatewaylayer"(Do not use dots in directory names).(ãÿ„ıÿÿÿÿ8“œ§ø„2J$79a578b7-9315-48ac-8881-6f3a43328266
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(”Í™˜8¯€Í‚…2
+r
+java:S1481"*Remove this unused "value" local variable.(ª…±¬øÿÿÿÿ8–œ§ø„2J$5541870d-25e1-4fb4-bf9d-7efc603df822
+v
+java:S1068".Remove this unused "otpGateway" private field.(Ğçıÿÿÿÿ8—œ§ø„2J$569045a1-9ce0-4288-9ab7-0c323dcb23d8

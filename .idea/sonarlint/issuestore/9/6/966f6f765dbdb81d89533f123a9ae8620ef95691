@@ -1,0 +1,32 @@
+
+¢
+java:S1598"ŞThis file "DefaultDashBoardFromController.java" should be located in "edu\icet\clothify\persistence" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\persistence"(Do not use dots in directory names).(Û¬8‚Úæñ„2J$84ca79c8-3792-48c1-a4d9-f7b5bacd1d10
+Š
+java:S2094"BRemove this empty class, write its code or make it an "interface".(ïÖÙùÿÿÿÿ8èÁ‰ò„2J$a65caeba-6a58-44c0-a034-275760420472
+
+java:S1128">Remove this unused import 'javafx.beans.value.ChangeListener'.(¸÷Í8éÁ‰ò„2J$9c787b0b-1397-4b90-aa0e-8111d08b017a
+‚
+java:S1128"?Remove this unused import 'javafx.beans.value.ObservableValue'.(´œ«Å8éÁ‰ò„2J$8ae0dde0-402b-40a5-a85e-5fed44622435
+u
+java:S1128"-Remove this unused import 'javafx.fxml.FXML'.(ÃÚ¢„şÿÿÿÿ8éÁ‰ò„2J$7e9a4b49-ee91-478a-a92d-9b5c2f47ab01
+{
+java:S1128"3Remove this unused import 'javafx.fxml.FXMLLoader'.(À‡ô³úÿÿÿÿ8éÁ‰ò„2J$3166ba75-6052-4539-a1d7-b26057dc4fae
+y
+java:S1128"6Remove this unused import 'javafx.fxml.Initializable'.(™ÎùÆ8éÁ‰ò„2J$e08052ac-2cd6-4381-bedf-2ea6e57451ef
+r
+java:S1128"/Remove this unused import 'javafx.scene.Scene'.(Õü²8éÁ‰ò„2J$4af2d702-5380-45d9-b399-83319d93653c
+x
+java:S1128	"5Remove this unused import 'javafx.scene.control.Tab'.(öÁôË8êÁ‰ò„2J$26596266-97f2-474e-82c9-77b56eb74cf2
+|
+java:S1128
+"9Remove this unused import 'javafx.scene.control.TabPane'.(ÄÑ”Â8êÁ‰ò„2J$afb70aa2-8093-4023-a97f-a2158cf5f1b0
+~
+java:S1128";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ8êÁ‰ò„2J$a5f6fed7-5334-4a7b-89d4-06194119fb47
+w
+java:S1128"/Remove this unused import 'javafx.stage.Stage'.(æÄ¸²úÿÿÿÿ8êÁ‰ò„2J$211042e4-c41c-4c7a-b4a4-1039b1906f96
+x
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8êÁ‰ò„2J$8ac3295e-d609-4eb7-be67-b9a2d52114f4
+q
+java:S1128")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ8êÁ‰ò„2J$a07a8329-c860-45de-980a-c6bfa59cf73f
+}
+java:S1128"5Remove this unused import 'java.util.ResourceBundle'.(ıÆ£¯øÿÿÿÿ8êÁ‰ò„2J$23ccbeb6-b6ea-4d98-a831-1eeba477629d

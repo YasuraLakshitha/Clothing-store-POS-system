@@ -1,0 +1,10 @@
+
+v
+java:S1121".Extract the assignment out of this expression.(íûÌ¢üÿÿÿÿ8öµı…2J$f66295ee-3009-4406-a065-53ef930ba80f
+‚
+java:S1598"¾This file "DBConnection.java" should be located in "edu\icet\clothify\util" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\util"(Do not use dots in directory names).(ÈÂš„8÷µı…2J$c4e4ab02-82fa-43b3-82a5-ea7d5a3e1d32
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8÷µı…2J$2b4ea9c0-0569-423b-9c92-b72e7f546e46
+Ü
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(® ©ş8¤‚…2J$06779014-02b9-41c9-8fb1-4cd5a606bacc
+y
+java:S6437"6Revoke and change this password, as it is compromised.(¡å·è8úµı…2J$1e2714df-959e-496a-b923-46bb5b48bdfa

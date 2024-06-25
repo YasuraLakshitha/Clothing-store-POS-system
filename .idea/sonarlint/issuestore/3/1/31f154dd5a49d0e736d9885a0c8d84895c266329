@@ -1,0 +1,24 @@
+
+¡
+java:S2293o"YReplace the type specification in this constructor call with the diamond operator ("<>").(š¼ìœøÿÿÿÿ8È”ò„2J$8e479fe7-4438-4f99-b9ce-8fd6b29ab415
+¡
+java:S2293t"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÌÍ›‹øÿÿÿÿ8È”ò„2J$8d99cb9b-4b67-4386-a3f3-ba53af21b3b0
+
+java:S1598"ÒThis file "ItemFormController.java" should be located in "edu\icet\clothify\persistence" directory, not in "D:\PROJECTS\clothify\src\main\java\edu.icet.clothify\persistence"(Do not use dots in directory names).(Û¬J$aedac083-a7fe-4320-bd4b-7fb2133d75d7
+¾
+java:S1186²"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ë»«ÙJ$3a0d042f-6b20-42f0-bc62-66392412bba8
+¾
+java:S1186¶"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŠÜÎ£J$dd75e93c-17e8-49a0-9209-f74e01693800
+w
+java:S1144¾".Remove this unused private "setItemId" method.(È«„ôıÿÿÿÿ8™È”ò„2J$a99ddebd-fea3-4682-934d-d946cb51440c
+o
+java:S1135‹"2Complete the task associated to this TODO comment.(±½×ÏJ$ca7cf71b-3938-4ca3-8eca-f6021a1725f2
+t
+java:S1135£"2Complete the task associated to this TODO comment.(«õ·”ùÿÿÿÿJ$5681ec35-0705-48d9-af21-98fde65d8752
+t
+java:S1135¤"2Complete the task associated to this TODO comment.(ºÓåòøÿÿÿÿJ$34a05d48-241b-431a-b274-5dcd9fa4b5b6
+l	java:S106Ç"+Replace this use of System.out by a logger.(ë™†äúÿÿÿÿJ$277c5917-60c6-4122-b060-47efdb806e4f
+o
+java:S1172×"2Remove this unused method parameter "actionEvent".(ÈªÈÒJ$dc3da188-29d9-4073-8552-21fa813fd31f
+h
+java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8ê’—ò„2J$4bd2cf41-bab4-4b3e-9f2c-9da9a411715e
